@@ -9,7 +9,7 @@ interface ProductProps {
 export function Product({ product }: ProductProps) {
     return (
         <div
-            className="border py-2 px-4 rounded flex-col items-center mb-2" 
+            className="border py-2 px-4 rounded flex flex-col items-center mb-2" 
         >
             <img src={product.image} className="w-1/6" alt={product.title} />
             <p>{ product.title }</p>
