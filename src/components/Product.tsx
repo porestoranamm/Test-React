@@ -14,6 +14,7 @@ export function Product({ product }: ProductProps) {
             <img src={product.image} className="w-1/6" alt={product.title} />
             <p>{ product.title }</p>
             <p className="font-bold">{product.price}</p>
+            <button className="py-2 px-4 border bg-yellow-400">Show details</button>
         </div>
     )
 }
