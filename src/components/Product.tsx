@@ -21,7 +21,7 @@ export function Product({ product }: ProductProps) {
             <p>{ product.title }</p>
             <p className="font-bold">{product.price}</p>
             <button 
-            className = {btnClasses.join('')}
+            className = {btnClasses.join(' ')}
             onClick={() => setDetails(prev => !prev)}
             >
                 { details ? 'Hide Details' : 'Show Details'}
