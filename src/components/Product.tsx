@@ -23,6 +23,13 @@ export function Product({ product }: ProductProps) {
                 Show details
                 </button>
 
+                <button 
+            className="py-2 px-4 border bg-blue-400"
+            onClick={() => setDetails(false)}
+            >
+                Hide details
+                </button>
+
                 {details && <div>
                     <p>{ product.description }</p>
                 </div>}
