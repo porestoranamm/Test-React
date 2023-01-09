@@ -9,6 +9,10 @@ interface ProductProps {
 export function Product({ product }: ProductProps) {
     const [details, setDetails] = useState(false)
 
+    const btnClassName = details ? 'bg-yellow-400' : 'bg-blue-400'
+
+    const btnClasses = ['py-2 px-4 border', btnClassName]
+
     return (
         <div
             className="border py-2 px-4 rounded flex flex-col items-center mb-2" 
@@ -17,17 +21,10 @@ export function Product({ product }: ProductProps) {
             <p>{ product.title }</p>
             <p className="font-bold">{product.price}</p>
             <button 
-            className="py-2 px-4 border bg-yellow-400"
-            onClick={() => setDetails(true)}
+            className = {btnClasses.join('')}
+            onClick={() => setDetails(prev => !prev)}
             >
-                Show details
-                </button>
-
-                <button 
-            className="py-2 px-4 border bg-blue-400"
-            onClick={() => setDetails(false)}
-            >
-                Hide details
+                { details ? 'Hide Details' : 'Show Details'}
                 </button>
 
                 {details && <div>
