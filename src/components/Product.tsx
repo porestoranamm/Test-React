@@ -9,9 +9,9 @@ interface ProductProps {
 export function Product({ product }: ProductProps) {
     const [details, setDetails] = useState(false)
 
-    const btnClassName = details ? 'bg-yellow-400' : 'bg-blue-400'
+    const btnBgClassName = details ? 'bg-yellow-400' : 'bg-blue-400'
 
-    const btnClasses = ['py-2 px-4 border', btnClassName]
+    const btnClasses = ['py-2 px-4 border', btnBgClassName]
 
     return (
         <div
